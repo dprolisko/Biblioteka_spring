@@ -12,7 +12,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = "authors")
 
 public class Book {
 
@@ -39,7 +38,7 @@ public class Book {
     )
     private Set<Author> authors = new HashSet<>();
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
     private Set<Author> author = new HashSet<>();
 
 }

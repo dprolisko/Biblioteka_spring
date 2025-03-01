@@ -12,7 +12,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = "books")
 
 public class Author {
 
@@ -27,7 +26,7 @@ public class Author {
         this.name = name;
     }
 
-    @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany
     private Set<Book> books = new HashSet<>();
 
 }

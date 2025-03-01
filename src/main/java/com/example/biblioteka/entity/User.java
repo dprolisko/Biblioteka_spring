@@ -28,7 +28,7 @@ public class User {
     @Column(unique = true, nullable = false)
     private String email;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
     private Set<Book> book = new HashSet<>();
 
 
