@@ -24,5 +24,9 @@ public class UserService {
         return Optional.of(userRepository.save(user));
     }
 
+    public Optional<User> getUserById(Long id) {
+        
+    }
+
 
 }
