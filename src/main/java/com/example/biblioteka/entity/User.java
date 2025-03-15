@@ -31,5 +31,8 @@ public class User {
     @OneToMany
     private Set<Book> book = new HashSet<>();
 
+    @OneToMany
+    private Set<Addres> addres = new HashSet<>();
+
 
   }
